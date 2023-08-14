@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/948ae63bc3.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Shreelakshmi Hegde</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="#header"><img src="assets/shree.png" class="logo" alt="logo"
+              /></a>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>Hi,I am <span>Shreelakshmi </span>Hegde.</h1>
+        </div>
+      </div>
+    </div>
+    <!--About Me-->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="assets/womenn.png" alt="user" />
+          </div>
+
+          <div class="about-col-2">
+            <h1 class="subtitle">About Me</h1>
+            <br>
+            <p>
+              Hello,
+               I am Shreelakshmi Narasimha Hegde currently pursing my MCA
+                in MS Raimaih Institute of Technology Bangalore. Interested
+                 in database and IOT .. I want to be a backend developer I'm always
+                  looking for opportunities to expand my skill set and explore new areas of development.
+                   I always love to learning new skills and technology.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span> Programming Languages</span>
+                  <br />C,Java,Python,JavaScript
+                </li>
+                <li>
+                  <span>Web Technologies</span>
+                  <br />HTML5, CSS,React
+                </li>
+                <span>Data Management</span>
+                  <br />MySQL,Oracle
+                </li>
+                <li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022-24</span>
+                  <br />MCA from MSRIT Bangalore
+                </li>
+                <li>
+                  <span>2019-22</span>
+                  <br />BSc from DR.A.V.Baliga Kumta
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Contact-->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="subtitle">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>shreelakshmihegde.1@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>9964300914</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/shreelakshmi__hegde/" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/shreelakshmi-narasimha-hegde-122742217/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/shree-2023" target="_blank"><i class="fa-brands
+                  fa-github"></i></a>
+
+          <div class="contact-right">
+            <form action="">
+              <input type="text" name="Name" placeholder="Your Name" required/>
+              <input type="email" name="Email" placeholder="Your Email"
+                required/>
+              <textarea name="Message" rows="6" placeholder="Your Message"
+                required></textarea>
+              <button type="submit" class="btn down">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Shreelakshmi Hegde. All rights reserved.</p>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
